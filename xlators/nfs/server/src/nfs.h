@@ -103,7 +103,7 @@ struct nfs_state {
     gf_boolean_t rdirplus;
 
 #ifdef HAVE_LIBTIRPC
-    bool svc_running;
+    int svc_running;
 #endif
 };
 

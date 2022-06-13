@@ -1679,7 +1679,7 @@ nfs_start_rpc_poller(struct nfs_state *state)
  *     all registered services, from any thread.
  */
 #ifdef HAVE_LIBTIRPC
-    if (uatomic_xchg(&state->svc_running, true)) {
+    if (uatomic_xchg(&state->svc_running, 1)) {
         return;
     }
 #endif
